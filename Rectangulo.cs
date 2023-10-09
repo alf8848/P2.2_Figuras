@@ -1,9 +1,7 @@
 namespace P2_2_Figuras
 {
-
     public class Rectangulo : Figura
     {
-
         private double _basee;
         private double _altura;
 
@@ -15,15 +13,15 @@ namespace P2_2_Figuras
 
         public override double GetArea()
         {
-            return (this._basee * this._altura); // Corregir el nombre de la variable 'vase' a 'basee'
-
+            return this._basee * this._altura;
         }
+
         public override string ToString()
         {
             return $@"
-            Area: {this.GetArea()}
-            Ancho: {this._basee} 
-            Alto: {this._altura}
+            Área: {this.GetArea()}
+            Base: {this._basee}
+            Altura: {this._altura}
             ";
         }
     }

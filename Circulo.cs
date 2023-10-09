@@ -6,7 +6,13 @@ namespace P2_2_Figuras
     {
         protected double _radio;
 
-        public Circulo(double radio) => this._radio = radio;
+
+        public Circulo(double radio)
+        {
+            this._radio = radio;
+        }
+
+        public Circulo(double radio, TimeSpan timeSpan) => this._radio = radio;
 
         public override double GetArea()
         {
