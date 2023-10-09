@@ -15,7 +15,12 @@ namespace P2_2_Figuras
 
         internal abstract void CambiarColor(Color nuevoColor);
 
-        internal object GetColorName()
+        public virtual string GetColorName()
+        {
+            return _color.Name;
+        }
+
+        internal void CambiarColor(object nuevoColor)
         {
             throw new NotImplementedException();
         }

@@ -20,6 +20,8 @@ namespace P2_2_Figuras
 
         public Circulo(double radio, TimeSpan timeSpan) => this._radio = radio;
 
+        public Color Color { get; internal set; }
+
         public override double GetArea()
         {
             return Math.PI * (this._radio * this._radio);
@@ -36,7 +38,7 @@ namespace P2_2_Figuras
 
         internal override void CambiarColor(Color nuevoColor)
         {
-            throw new NotImplementedException();
+            _color = nuevoColor;
         }
     }
 

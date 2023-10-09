@@ -4,6 +4,7 @@ namespace P2_2_Figuras
 {
     public class Rectangulo : Figura
     {
+        internal Color Color;
         private double _basee;
         private double _altura;
         private Color blue;
@@ -36,7 +37,7 @@ namespace P2_2_Figuras
 
         internal override void CambiarColor(Color nuevoColor)
         {
-            throw new NotImplementedException();
+            _color = nuevoColor;
         }
 
     }

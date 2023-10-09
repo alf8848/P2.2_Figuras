@@ -19,6 +19,8 @@ namespace P2_2_Figuras
             this.green = green;
         }
 
+        public Color Color { get; internal set; }
+
         public override double GetArea()
         {
             return (this._lado * this._lado); // Corregir el nombre de la variable 'vase' a 'basee'
@@ -35,7 +37,7 @@ namespace P2_2_Figuras
 
         internal override void CambiarColor(Color nuevoColor)
         {
-            throw new NotImplementedException();
+            _color = nuevoColor;
         }
     }
 }
