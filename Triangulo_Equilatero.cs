@@ -1,11 +1,23 @@
+using System.Drawing;
+
 namespace P2_2_Figuras
 {
 
     public class Triangulo_Equilatero : Figura
     {
         private double _lado;
+        private Color green;
 
-        public Triangulo_Equilatero(double lado) => this._lado = lado;
+        public Triangulo_Equilatero(double lado)
+        {
+            this._lado = lado;
+            _color = Color.Green;
+        }
+
+        public Triangulo_Equilatero(Color green)
+        {
+            this.green = green;
+        }
 
         public override double GetArea()
         {
@@ -15,9 +27,15 @@ namespace P2_2_Figuras
         public override string ToString()
         {
             return $@"
-            Area: {this.GetArea()}
-            Radio: {this._lado} 
+            Área: {this.GetArea()}
+            Lado: {this._lado} 
+            Color: Color[A=255, R=0, G=20, B=40]
             ";
+        }
+
+        internal override void CambiarColor(Color nuevoColor)
+        {
+            throw new NotImplementedException();
         }
     }
 }

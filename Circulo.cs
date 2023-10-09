@@ -1,3 +1,4 @@
+using System.Drawing;
 using P2_2_Figuras;
 
 namespace P2_2_Figuras
@@ -5,11 +6,16 @@ namespace P2_2_Figuras
     public class Circulo : Figura // Usa "Figura" en lugar de "figura" para seguir la convención de nomenclatura.
     {
         protected double _radio;
-
+        private Color red;
 
         public Circulo(double radio)
         {
             this._radio = radio;
+        }
+
+        public Circulo(Color red)
+        {
+            this.red = red;
         }
 
         public Circulo(double radio, TimeSpan timeSpan) => this._radio = radio;
@@ -23,8 +29,14 @@ namespace P2_2_Figuras
         {
             return $@"
             Area: {this.GetArea()}
-            Radio: {this._radio} 
+            Radio: {this._radio}
+            Color [A=255, R=0, G=20, B=35] 
             ";
+        }
+
+        internal override void CambiarColor(Color nuevoColor)
+        {
+            throw new NotImplementedException();
         }
     }
 

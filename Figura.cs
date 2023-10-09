@@ -8,6 +8,16 @@ namespace P2_2_Figuras
         protected Color _color;
 
         public abstract double GetArea();
+        public void CambiarColor(string nuevoColor)
+        {
+            _color = Color.FromName(nuevoColor);
+        }
 
+        internal abstract void CambiarColor(Color nuevoColor);
+
+        internal object GetColorName()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -19,9 +19,25 @@ public class P2_2_Figuras
         Triangulo_Equilatero TE1 = new Triangulo_Equilatero(84);
         Console.WriteLine(TE1);
 
+        // Crear una lista de figuras (rectángulos, círculos y triángulos equiláteros)
+        List<Figura> listaDeFiguras = new List<Figura>
+            {
+                new Rectangulo(Color.Blue), // Rectángulo azul
+                new Circulo(Color.Red), // Círculo rojo
+                new Triangulo_Equilatero(Color.Green) // Triángulo equilátero verde
+            };
 
+        Color nuevoColor = Color.FromArgb(245, 40, 145, 200);
 
+        foreach (Figura figura in listaDeFiguras)
+        {
+            figura.CambiarColor(nuevoColor);
+        }
 
+        foreach (Figura figura in listaDeFiguras)
+        {
+            Console.WriteLine($"Color de la figura: {figura.GetColorName()}");
+        }
     }
 
 }
